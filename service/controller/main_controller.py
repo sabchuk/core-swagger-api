@@ -18,8 +18,9 @@ class MainService(Resource):
         try:
             dados_request = request.get_json()
             main_service = ListaDeRepositorios()
-            resp = main_service.requisicao_api(dados_request)
+            resp = main_service.requisicao_api(dados_request['usuario'])
             response = objResponse.send_success(data=resp, messages=mensagens.SUCESSO_PREDICT, status=codeHttp.SUCCESS_200)
+ 
 
         except OSError as error:
             response = objResponse.send_exception(objError=error, messages=mensagens.ERROR_OS, status=codeHttp.ERROR_500)
