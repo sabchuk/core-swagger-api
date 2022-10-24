@@ -1,7 +1,7 @@
 # Mensagens log API
 INICIO_LOAD_SERVICO = "Carregando o servico..."
 FIM_LOAD_SERVICO = "Servico carregado."
-INICIO_PREDICT = "Iniciando a classificacao..."
+INICIO_PREDICT = "Iniciando o servico"
 FIM_PREDICT = "Fim do tratamento."
 
 # Error Business #

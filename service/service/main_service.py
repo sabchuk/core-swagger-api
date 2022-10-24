@@ -10,20 +10,19 @@ from service.constants import mensagens
 class ListaDeRepositorios():
 
     def __init__(self):
-         logger.debug(mensagens.INICIO_LOAD_SERVICO)
--        self.load_servico()
+        logger.debug(mensagens.INICIO_LOAD_SERVICO)
  
     def requisicao_api(self, usuario):
-         resposta = requests.get(
-+            f'https://api.github.com/users/{usuario}/repos')
-         if resposta.status_code == 200:
-            return resposta.json()
-+           print(resposta.json())
-+           for repo in resposta.json():
-+           return [repo['url'] for repo in resposta.json()]
-         else:
-+           return None
- 
+        resposta = requests.get(
+           f'https://api.github.com/users/{usuario}/repos')
+
+        if resposta.status_code == 200:
+            url_vector = []
+
+            for repo in resposta.json():
+                url_vector.append(repo['html_url'])
+            return [repo['url'] for repo in resposta.json()]
+
     def imprime_repositorios(self):
         dados_api = self.requisicao_api()
         if type(dados_api) is not int:
