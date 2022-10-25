@@ -14,6 +14,6 @@ ERROR_NONE_TYPE = 'Arquivo invalido. verifique o tipo do documento.'
 ERROR_KEY = 'Chave incorreta'
 
 # Sucess Business #
-SUCESSO_GET = "Classificador OK."
-SUCESSO_PREDICT = "Classificacao realizada com sucesso."
+SUCESSO_GET = "Servico OK."
+SUCESSO_PREDICT = "Busca de repositorios realizada com sucesso."
 SUCESSO_ENDPOINT = "Endpoints funcionando"
